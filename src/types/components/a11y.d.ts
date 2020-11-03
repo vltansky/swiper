@@ -57,19 +57,19 @@ export interface A11yOptions {
    *
    * @default null
    */
-  containerMessage?: string | null;
+  containerMessage?: string;
 
   /**
    * Message for screen readers describing the role of outer swiper container
    *
    * @default null
    */
-  containerRoleDescriptionMessage?: string | null;
+  containerRoleDescriptionMessage?: string;
 
   /**
    * Message for screen readers describing the role of slide element
    *
    * @default null
    */
-  itemRoleDescriptionMessage?: string | null;
+  itemRoleDescriptionMessage?: string;
 }

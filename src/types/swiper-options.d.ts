@@ -76,7 +76,7 @@ export interface SwiperOptions {
    * @note Setting this parameter will make Swiper not responsive
    * @default null
    */
-  width?: number | null;
+  width?: number;
 
   /**
    * Swiper height (in px). Parameter allows to force Swiper height.
@@ -85,7 +85,7 @@ export interface SwiperOptions {
    * @note Setting this parameter will make Swiper not responsive
    * @default null
    */
-  height?: number | null;
+  height?: number;
 
   /**
    * Set to true and slider wrapper will adopt its height to the height of the currently active slide
@@ -388,7 +388,7 @@ export interface SwiperOptions {
    *
    * @default null
    */
-  swipeHandler?: CSSSelector | HTMLElement | null;
+  swipeHandler?: CSSSelector | HTMLElement;
 
   // Clicks
   /**
@@ -520,7 +520,7 @@ export interface SwiperOptions {
    *
    * @default null
    */
-  loopedSlides?: number | null;
+  loopedSlides?: number;
 
   /**
    * Enable and loop mode will fill groups with insufficient number of slides with blank slides. Good to be used with slidesPerGroup parameter
@@ -581,13 +581,13 @@ export interface SwiperOptions {
    *
    * @default null
    */
-  userAgent?: string | null;
+  userAgent?: string;
   /**
    * Required for active slide detection when rendered on server-side and enabled history
    *
    * @default null
    */
-  url?: string | null;
+  url?: string;
 
   a11y?: A11yOptions;
   autoplay?: AutoplayOptions | boolean;
@@ -608,4 +608,9 @@ export interface SwiperOptions {
   thumbs?: ThumbsOptions;
   virtual?: VirtualOptions | boolean;
   zoom?: ZoomOptions | boolean;
+  _emitClasses?: boolean;
+  /**
+   * Add event listener that will be fired on all events
+   */
+  onAny?(handler: (eventName: string, ...args: any[]) => void): void;
 }

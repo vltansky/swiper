@@ -5,6 +5,16 @@ export interface ThumbsMethods {
    * Swiper instance of thumbs swiper
    */
   swiper: Swiper;
+
+  /**
+   * Update thumbs
+   */
+  update(initial: boolean): void;
+
+  /**
+   * Initialize thumbs
+   */
+  init(): boolean;
 }
 
 export interface ThumbsEvents {}
@@ -15,7 +25,7 @@ export interface ThumbsOptions {
    *
    * @default null
    */
-  swiper?: Swiper | null;
+  swiper?: Swiper;
   /**
    * Additional class that will be added to activated thumbs swiper slide
    *

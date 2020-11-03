@@ -58,12 +58,12 @@ export interface MousewheelOptions {
    *
    * @default null
    */
-  thresholdDelta?: number | null;
+  thresholdDelta?: number;
 
   /**
    * Minimum mousewheel scroll time delta (in ms) to trigger swiper slide change
    *
    * @default null
    */
-  thresholdTime?: number | null;
+  thresholdTime?: number;
 }
