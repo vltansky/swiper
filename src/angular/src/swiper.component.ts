@@ -189,7 +189,7 @@ export class SwiperComponent implements OnInit {
   get virtual() {
     return this._virtual;
   }
-  private _virtual: SwiperOptions['virtual'];
+  private _virtual: SwiperOptionss['virtual'];
 
   @Input()
   set config(val: SwiperOptions) {
