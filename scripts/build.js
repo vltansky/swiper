@@ -8,14 +8,18 @@ const buildStyles = require('./build-styles');
 const buildAngular = require('./build-angular');
 
 const build = () => {
-  buildJsBundle();
-  buildJsCore();
-  buildTypes();
-  buildReact();
-  buildVue();
-  buildSvelte();
-  buildStyles();
-  buildAngular();
+  try {
+    buildJsBundle();
+    buildJsCore();
+    buildTypes();
+    buildReact();
+    buildVue();
+    buildSvelte();
+    buildStyles();
+    buildAngular();
+  } catch (err) {
+    throw new Error(err);
+  }
 };
 
 build();
