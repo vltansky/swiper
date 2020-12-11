@@ -7,19 +7,17 @@ const buildSvelte = require('./build-svelte');
 const buildStyles = require('./build-styles');
 const buildAngular = require('./build-angular');
 
-const build = () => {
-  try {
-    buildJsBundle();
-    buildJsCore();
-    buildTypes();
-    buildReact();
-    buildVue();
-    buildSvelte();
-    buildStyles();
-    buildAngular();
-  } catch (err) {
-    throw new Error(err);
-  }
+const build = async () => {
+  buildJsBundle();
+  buildJsCore();
+  buildTypes();
+  buildReact();
+  buildVue();
+  buildSvelte();
+  buildStyles();
+  buildAngular();
 };
 
-build();
+build().catch((err) => {
+  throw new Error(err);
+});
