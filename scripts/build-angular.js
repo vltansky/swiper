@@ -9,7 +9,5 @@ module.exports = async () => {
   // const env = process.env.NODE_ENV || 'development';
   // const outputDir = env === 'development' ? 'build' : 'package';
   // console.log(outputDir);
-  await exec.promise(`ng build swiper --prod`).catch((err) => {
-    throw new Error(err);
-  });
+  await exec.promise(`ng build swiper --prod`);
 };
